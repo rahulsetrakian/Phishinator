@@ -1,0 +1,106 @@
+# 1. PYTHON CORE & BYTECODE
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+modules/
+
+# 2. VIRTUAL ENVIRONMENTS
+.venv/
+venv/
+env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+.pip-wheel-index/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 3. FLASK CONFIGURATIONS & SECRETS
+.env
+.flaskenv
+*.env
+instance/
+.webassets-cache/
+
+# 4. DATABASES & MIGRATIONS
+*.db
+*.sqlite
+*.sqlite3
+# Keep migrations directory structural files, ignore temporary scripts
+migrations/versions/*.pyc
+
+
+# 5. CELERY, REDIS, & TASK QUEUES
+celerybeat-schedule
+celerybeat.pid
+*.rdb
+
+# 6. TESTING, COVERAGE, & QUALITY ASSURANCE
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.black/
+
+
+# 7. LOGS & TEMPORARY FILES
+*.log
+local_settings.py
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+
+# 8. BUILD, PACKAGING, & DISTRIBUTIONS
+develop-eggs/
+downloads/
+lib/
+lib64/
+parts/
+sdist/
+var/
+bin/
+build/
+dist/
+tailwindcss
+tailwindcss.exe
+daisyui.mjs
+daisyui-theme.mjs
+static/css/output.css
+
+
+
+# 9. IDEs AND EDITORS (VS Code, PyCharm, Sublime)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# 10. DOCKER & CONTAINERIZATION
+.dockerignore
+# Uncomment below if you explicitly want to keep your docker files local
+# docker-compose.override.yml

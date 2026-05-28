@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage - Phishinator{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Header Hero Banner -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 shadow-md">
+        <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl">Welcome back, {{ user }}!</h1>
+        <p class="mt-2 text-indigo-100 max-w-xl">Manage your active projects and check system parameters in real time.</p>
+    </header>
+
+    <!-- Grid Data Container -->
+    <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Empty fallback notice -->
+        <div class="col-span-full bg-slate-100 rounded-xl p-12 text-center border border-dashed border-slate-300">
+            <p class="text-slate-500 font-medium">No projects available at this moment.</p>
+        </div>
+    </section>
+</div>
+{% endblock %}
