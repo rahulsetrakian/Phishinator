@@ -19,6 +19,7 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+Procfile
 
 # 3. FLASK CONFIGURATIONS & SECRETS
 .env
