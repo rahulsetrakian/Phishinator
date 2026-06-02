@@ -1,6 +1,6 @@
 # Phishinator - Rule-Based Phishing Email Analyser
 
-Phishinator is Rule-Based Phishing Email Analyser which works in the web, and uses LLM to categorize the findings into various types.
+Phishinator is a rule-based phishing email analyser which works on the web and uses LLM to categorise the findings into various types.
 
 #### Video Demo:  <URL HERE>
 

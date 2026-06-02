@@ -5,27 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
-</head>
-<body>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <section class="bg-base-200">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-            <div class="py-4">
-                <h1 class="text-3xl font-bold">daisyUI</h1>
-            </div>
-            <div class="py-4">
-                <ul class="menu menu-horizontal">
-                    <li><a href="/index">Home</a></li>
+</head>
+<body class="bg-base-100 text-base-content font-dm-sans h-screen flex flex-col justify-between">
+
+    <nav class="container mx-auto">
+        <div class="max-lg:collapse w-full">
+            <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
+            <label for="navbar-1-toggle" class="fixed inset-0 hidden max-lg:peer-checked:block"></label>
+            <div class="collapse-title navbar">
+                <div class="navbar-start">
+                <label for="navbar-1-toggle" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <button class="text-3xl font-bold font-major">Phishinator</button>
+                </div>
+            <div class="navbar-end hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/glossary">Glossary</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="collapse-content lg:hidden z-1s">
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/glossary">Glossary</a></li>
                 </ul>
             </div>
         </div>
-    </section>
-        
+    </nav>
+
+
+  <section class="m-6">
 
     {% block content %}{% endblock %}
 
-    
+   </section> 
+
+ <section class="container mx-auto p-4">
+  <footer class="footer sm:footer-horizontal footer-center rounded-xl">
+    <aside class="lg:flex lg:justify-between w-full">
+        <p>© 2026 Phishinator. All rights reserved.</p>
+        <p>Made with ❤️ by <a href="https://rahulsetrakian.in" class="link underline hover:no-underline">Rahul J.</a></p>
+    </aside>
+  </footer>
+ </section>
+
 </body>
 </html>
