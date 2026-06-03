@@ -3,14 +3,169 @@
 {% block title %}Glossary - Phishinator{% endblock %}
 
 {% block content %}
-<div class="space-y-6 container mx-auto">
+<div class="mx-auto container space-y-6">
     <h1 class="text-3xl font-bold">Glossary</h1>
-    <!-- Grid Data Container -->
-    <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Empty fallback notice -->
-        <div class="col-span-full bg-slate-100 rounded-xl p-12 text-center border border-dashed border-slate-300">
-            <p class="text-slate-500 font-medium">Demo Content.</p>
+    <p class="text-gray-600">Here you can find definitions and explanations of common terms related to phishing and email security.</p>
+
+    <ul class="grid grid-cols-1 gap-6 auto-rows-fr md:grid-cols-2 xl:grid-cols-3">
+
+    <!-- Card 1 -->
+    <li class="min-h-[14rem] list-none md:col-span-2 xl:col-span-2">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500 "></div>
+
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="flex flex-col gap-3">
+
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">
+                            Email Authentication
+                        </h3>
+
+                        <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">
+                            SPF, DKIM, and DMARC help verify that an email really came from the claimed sender.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </li>
+
+    <!-- Card 2 -->
+    <li class="min-h-[14rem] list-none">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500 "></div>
+
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="flex flex-col gap-3">
+    
+
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">
+                            Email Components
+                        </h3>
+
+                        <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">
+                            Header, Reply-To, Return-Path, and MIME define how an email is routed and displayed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <!-- Card 3 -->
+    <li class="min-h-[14rem] list-none md:col-span-2 xl:col-span-2">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500 "></div>
+
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="flex flex-col gap-3">
+
+
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">
+                            Phishing Techniques
+                        </h3>
+
+                        <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">
+                            Spoofing, homograph attacks, URL shorteners, QR phishing, smishing, and vishing are common phishing methods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <!-- Card 4 -->
+    <li class="min-h-[14rem] list-none">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500 "></div>
+
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="flex flex-col gap-3">
+ 
+
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">
+                            Threat Indicators
+                        </h3>
+
+                        <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">
+                            Suspicious domains, urgent language, credential harvesting, and attachment malware are warning signs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <!-- Card 5 -->
+    <li class="min-h-[14rem] list-none">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500 "></div>
+
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="flex flex-col gap-3">
+   
+
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">
+                            Glossary at a Glance
+                        </h3>
+
+                        <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">
+                            These terms help explain how phishing emails are built, authenticated, and identified.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <!-- Card 6 -->
+    <li class="min-h-[14rem] list-none">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500"></div>
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="space-y-3">
+                    <h3 class="text-xl font-semibold md:text-2xl">Sender Identity</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">From display names to domain reputation, sender identity shapes how quickly people trust or distrust a message.</p>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <!-- Card 7 -->
+    <li class="min-h-[14rem] list-none">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500"></div>
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="space-y-3">
+                    <h3 class="text-xl font-semibold md:text-2xl">Security Tools</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">Sandboxing, URL scanning, attachment inspection, and email filtering all help catch malicious messages early.</p>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <!-- Card 8 -->
+    <li class="min-h-[14rem] list-none md:col-span-2 xl:col-span-3">
+        <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+            <div class="absolute inset-0 rounded-2xl opacity-0 blur-xl transition duration-500"></div>
+            <div class="relative flex h-full flex-col justify-between gap-6 rounded-xl p-6">
+                <div class="space-y-3">
+                    <h3 class="text-xl font-semibold md:text-2xl">Reporting &amp; Response</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base">Quick reporting, user awareness, and incident follow-up turn phishing signals into faster containment and safer habits.</p>
+                </div>
+            </div>
+        </div>
+    </li>
+
+</ul>
+
+
+
+    
 </div>
 {% endblock %}

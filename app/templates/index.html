@@ -28,8 +28,7 @@
             </span>
         </span>
 
-        
-            <div class="col-span-full rounded-xl text-center">
+        <div class="col-span-full rounded-xl text-center">
                     <div class="flex items-center justify-center w-full">
                     <div class="flex flex-col items-center justify-center w-full h-64 bg-neutral-secondary-medium border border-dashed border-default-strong rounded-base">
                         <div class="flex flex-col items-center justify-center text-body pt-5 pb-6">
@@ -37,18 +36,19 @@
                         <p class="mb-2 text-sm">Click the button below to upload .eml file</p>
                         <p class="text-xs mb-4">Max. File Size: <span class="font-semibold">2MB</span></p>
                         <!-- Upload Button -->
-                        <button type="button" onclick="document.getElementById('dropzone-file-2').click()" class="inline-flex items-center text-black bg-brand hover:bg-gray-300 box-border border border-transparent ring-2 shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+                        <button type="button" onclick="document.getElementById('dropzone-file-1').click()" class="inline-flex items-center text-black bg-brand hover:bg-gray-300 box-border border border-transparent ring-2 shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
                             <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
                             Browse file
                         </button>
                         </div>
                     </div>
+
                     <!-- Hidden File Input (Outside Label) -->
-                    <form action="/upload" method="post" enctype="multipart/form-data"></form>
-                        <input id="dropzone-file-2" type="file" class="hidden" accept=".eml" />
+                    <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+                        <input id="dropzone-file-1" type="file" class="hidden" onchange="autoSubmit()" accept=".eml" />
                     </form>
                     </div>
-            </div>
+        </div>
 
     </section>
 </div>
@@ -90,6 +90,24 @@
 </div>
 
 </div>
+
+
+<script>
+    // Javascript to do auto submit
+    function autoSubmit() {
+        const fileInput = document.getElementById('dropzone-file-1');
+        // Checking if the size of the file is under 2MB
+        if (fileInput.files.length > 0 && fileInput.files[0].size > 2 * 1024 * 1024) {
+            alert('File size exceeds 2MB limit. Please choose a smaller file.');
+            fileInput.value = ''; // Clear the file input
+            return;
+        } else
+        {
+            // Submit the form if the file size is valid
+            document.getElementById('upload-form').submit();
+        }
+    }
+</script>
 
 
 {% endblock %}

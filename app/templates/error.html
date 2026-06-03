@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Error - Phishinator{% endblock %}
+
+{% block content %}
+
+<div class="space-y-6 container mx-auto text-center">
+    <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl">An error occurred</h1>
+        <p>Error: {{ error }}.</p>
+        <a href="{{ url_for('index.index') }}" class="inline-flex items-center btn bg-brand rounded font-medium rounded-base text-sm px-4 py-2">
+            Go back to Home
+        </a>
+</div>
+
+{% endblock %}
