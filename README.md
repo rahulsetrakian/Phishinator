@@ -13,6 +13,10 @@ Phishinator is a rule-based phishing email analyser which works on the web and u
     ./tailwindcss -i app/static/css/input.css -o app/static/css/output.css --watch
 ```
 
+```
+export FLASK_APP=app.app && honcho run
+```
+
 
 ### Directory Structure
 

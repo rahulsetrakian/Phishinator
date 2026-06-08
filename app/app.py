@@ -1,6 +1,7 @@
+import os
 from flask import Flask, render_template
-from app.routes.index import index_bp
-from app.routes.analyser import uploader_bp
+from .routes.index import index_bp
+from .routes.analyser import uploader_bp
 
 app = Flask(__name__)
 app.register_blueprint(index_bp)
