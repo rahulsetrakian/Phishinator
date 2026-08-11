@@ -1,6 +1,6 @@
 # Phishinator
 
-#### Video Demo:  <YOUR_YOUTUBE_VIDEO_URL_HERE>
+#### Video Demo: https://youtu.be/Zz8wpisrgcA 
 
 #### Description:
 
