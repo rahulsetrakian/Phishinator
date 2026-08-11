@@ -1,0 +1,18 @@
+From: "Chase Bank Online" <no-reply@chase-secure-verify-login.org>
+To: john.doe@victim-domain.com
+Subject: ACTION REQUIRED: Verify your online banking credentials immediately
+Date: Mon, 10 Aug 2026 15:30:00 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Chase Online Security Alert</h2>
+    <p>We noticed unusual activity on your account. Please click the button below to verify your password and account details immediately.</p>
+    <p><a href="http://chase-secure-verify-login.org/auth/login">Verify Account Credentials Now</a></p>
+    <p><a href="http://testsafebrowsing.appspot.com/s/phishing.html">Emergency Password Reset Link</a></p>
+    <p>Failure to respond within 12 hours will lead to account suspension.</p>
+</body>
+</html>

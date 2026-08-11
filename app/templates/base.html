@@ -6,55 +6,51 @@
   <title>{% block title %}{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-
 </head>
-<body class="text-base-content font-dm-sans flex flex-col justify-between">
+<body class="text-base-content font-dm-sans min-h-screen flex flex-col justify-between bg-slate-50">
 
-    <nav class="container mx-auto">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="max-lg:collapse w-full">
             <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
             <label for="navbar-1-toggle" class="fixed inset-0 hidden max-lg:peer-checked:block"></label>
-            <div class="collapse-title navbar">
+            <div class="collapse-title navbar p-0">
                 <div class="navbar-start">
-                <label for="navbar-1-toggle" class="btn btn-ghost lg:hidden">
+                <label for="navbar-1-toggle" class="btn btn-ghost lg:hidden p-0 mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
-                <button class="text-3xl font-bold font-major"><a href="/">Phishinator</a></button>
+                <a href="/" class="text-3xl font-bold font-major hover:opacity-90 transition-opacity">Phishinator</a>
                 </div>
             <div class="navbar-end hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/glossary">Glossary</a></li>
+                <ul class="menu menu-horizontal px-1 gap-1">
+                    <li><a href="/" class="rounded-lg font-medium hover:bg-slate-200/60">Home</a></li>
+                    <li><a href="/about" class="rounded-lg font-medium hover:bg-slate-200/60">About</a></li>
+                    <li><a href="/glossary" class="rounded-lg font-medium hover:bg-slate-200/60">Glossary</a></li>
+                    <li><a href="/samples" class="rounded-lg font-medium hover:bg-slate-200/60">Samples</a></li>
                 </ul>
             </div>
             </div>
 
-            <div class="collapse-content lg:hidden z-1s">
-                <ul class="menu">
+            <div class="collapse-content lg:hidden z-10">
+                <ul class="menu bg-white border border-gray-700/20 rounded-xl p-2 mt-2 shadow-sm">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/glossary">Glossary</a></li>
+                    <li><a href="/samples">Samples</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex-grow">
+        {% block content %}{% endblock %}
+    </main>
 
-  <section class="m-6">
-
-    {% block content %}{% endblock %}
-
-   </section> 
-
- <section class="container mx-auto p-4">
-  <footer class="footer sm:footer-horizontal footer-center rounded-xl">
-    <aside class="lg:flex lg:justify-between w-full">
-        <p>© 2026 Phishinator. All rights reserved.</p>
-        <p>Made with ❤️ by <a href="https://rahulsetrakian.in" class="link underline hover:no-underline">Rahul J.</a></p>
-    </aside>
-  </footer>
- </section>
+    <footer class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600 border-t border-gray-700/20 pt-6">
+            <p>© 2026 Phishinator. All rights reserved.</p>
+            <p>Made with ❤️ by <a href="https://rahulsetrakian.in" class="link underline hover:no-underline font-medium">Rahul J.</a></p>
+        </div>
+    </footer>
 
 </body>
 </html>

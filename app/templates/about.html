@@ -3,16 +3,110 @@
 {% block title %}About - Phishinator{% endblock %}
 
 {% block content %}
-<section class="w-screen h-dvh">
-<div class="space-y-6 container mx-auto">
-    <h1 class="text-3xl font-bold">About</h1>
-    <!-- Grid Data Container -->
-    <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Empty fallback notice -->
-        <div class="col-span-full bg-slate-100 rounded-xl p-12 text-center border border-dashed border-slate-300">
-            <p class="text-slate-500 font-medium">Demo Content.</p>
+<div class="space-y-8">
+    
+    <!-- Hero Banner Card -->
+    <div class="group relative rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+        <div class="relative flex h-full flex-col justify-between gap-4 rounded-xl p-6 md:p-8">
+            <h1 class="text-3xl font-bold font-major md:text-4xl">About Phishinator</h1>
+            <p class="text-sm text-gray-600 dark:text-gray-400 md:text-base leading-relaxed max-w-3xl">
+                Phishinator is an email security analysis platform designed to dissect suspicious <span class="font-semibold text-slate-800">.eml</span> files. By combining rule-based heuristics, VirusTotal multi-link intelligence, and OpenRouter AI summarization, it provides instant threat clarity to defenders and users.
+            </p>
         </div>
-    </section>
+    </div>
+
+    <!-- Bento Grid Cards -->
+    <div class="grid grid-cols-1 gap-6 auto-rows-fr md:grid-cols-2 xl:grid-cols-3">
+        
+        <!-- What It Does Card -->
+        <div class="min-h-[14rem] md:col-span-1">
+            <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+                <div class="relative flex h-full flex-col justify-between gap-4 rounded-xl p-6">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">Core Functions</h3>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span>Parses full MIME structures, Return-Path, and envelope headers.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span>Extracts embedded links &amp; queries VirusTotal v3 security database.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span>Calculates heuristic risk score (0-100) based on threat patterns.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span>Generates OpenRouter AI executive security summary.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Threat Intelligence Card -->
+        <div class="min-h-[14rem] md:col-span-1">
+            <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+                <div class="relative flex h-full flex-col justify-between gap-4 rounded-xl p-6">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">Threat Intelligence</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Phishinator integrates directly with VirusTotal's URL API to verify whether linked domains are active malware hosts, phishing landing pages, or credential harvesters, providing enterprise-grade signal analysis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy & Protection Card -->
+        <div class="min-h-[14rem] md:col-span-2 xl:col-span-1">
+            <div class="group relative h-full rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+                <div class="relative flex h-full flex-col justify-between gap-4 rounded-xl p-6">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold md:text-2xl">Privacy &amp; Security</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Files are processed in memory and temporary storage, then immediately deleted after evaluation. IP rate-limiting ensures operational stability without storing sensitive user payload data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Security & Heuristic Vectors Section -->
+    <div class="space-y-4 pt-2">
+        <div class="space-y-1">
+            <h2 class="text-2xl font-bold font-major md:text-3xl">Detection Vectors</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Key signals evaluated by the Phishinator scoring engine.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="group relative rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+                <div class="relative flex h-full flex-col justify-between gap-3 rounded-xl p-6">
+                    <h3 class="text-lg font-semibold md:text-xl">Sender Mismatch</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Identifies discrepancies between display names, From addresses, and Return-Path routing.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+                <div class="relative flex h-full flex-col justify-between gap-3 rounded-xl p-6">
+                    <h3 class="text-lg font-semibold md:text-xl">Language Urgency</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Detects social engineering triggers demanding immediate password resets or account verification.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3">
+                <div class="relative flex h-full flex-col justify-between gap-3 rounded-xl p-6">
+                    <h3 class="text-lg font-semibold md:text-xl">Malicious Attachment Cues</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Flags attached payloads and archives commonly used to deliver trojans or ransomware.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-</section>
 {% endblock %}

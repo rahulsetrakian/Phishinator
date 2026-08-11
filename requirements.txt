@@ -2,4 +2,5 @@ Flask
 python-dotenv
 honcho
 pytest
-python-dotenv
+requests
+Flask-Limiter

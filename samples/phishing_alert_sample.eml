@@ -1,0 +1,91 @@
+From: Accounts Payable <billing@paypa1-security.example>
+To: employee@example.com
+Subject: URGENT: Payment Failed =?utf-8?b?4oCU?= Verify Your Account Within 30
+ Minutes
+Date: Mon, 10 Aug 2026 16:23:11 +0000
+Message-ID: <178637899106.310.12941666025316764188@example.com>
+Reply-To: support@paypa1-security.example
+X-Priority: 1
+Importance: high
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============5732218329492215843=="
+
+--===============5732218329492215843==
+Content-Type: multipart/alternative;
+ boundary="===============5372275835619763927=="
+
+--===============5372275835619763927==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+URGENT ACTION REQUIRED
+
+We detected an unusual payment attempt associated with your account.
+Your access may be suspended unless you verify your billing information
+within 30 minutes.
+
+Review the transaction:
+http://198.51.100.23/account/verify?session=9f3a7b1c
+
+Verification portal:
+https://login-paypal-security.example/auth/update
+
+If you did not authorize this transaction, open the attached
+Invoice_URGENT.exe immediately.
+
+Failure to respond may result in account suspension and an automatic
+charge of $749.00.
+
+--===============5372275835619763927==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+
+<html>
+<body>
+<p><b>URGENT ACTION REQUIRED</b></p>
+
+<p>We detected an unusual payment attempt associated with your account.
+Your access may be suspended unless you verify your billing information
+within <b>30 minutes</b>.</p>
+
+<p>Click the link below to review the transaction:</p>
+
+<p>
+<a href="http://198.51.100.23/account/verify?session=9f3a7b1c">
+https://secure-paypa1.example/account/verify
+</a>
+</p>
+
+<p>Additional verification portal:</p>
+<p>
+<a href="https://login-paypal-security.example/auth/update">
+Update Payment Information
+</a>
+</p>
+
+<p>If you did not authorize this transaction, open the attached
+<b>Invoice_URGENT.exe</b> immediately and follow the instructions.</p>
+
+<p>Failure to respond may result in account suspension and an automatic
+charge of $749.00.</p>
+
+<p>Regards,<br>
+Payment Security Team<br>
+Automated Notification</p>
+</body>
+</html>
+
+--===============5372275835619763927==--
+
+--===============5732218329492215843==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Invoice_URGENT.exe"
+MIME-Version: 1.0
+
+WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNU
+LUZJTEUhJEgrSCo=
+
+--===============5732218329492215843==--

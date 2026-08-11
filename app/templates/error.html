@@ -3,15 +3,15 @@
 {% block title %}Error - Phishinator{% endblock %}
 
 {% block content %}
-
-<section class="h-screen flex items-center justify-center">
-<div class="space-y-6 container mx-auto text-center">
-    <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl">An error occurred</h1>
-        <p>Error: {{ error }}.</p>
-        <a href="{{ url_for('index.index') }}" class="inline-flex items-center btn bg-brand rounded font-medium rounded-base text-sm px-4 py-2">
-            Go back to Home
-        </a>
+<div class="flex items-center justify-center py-16">
+    <div class="group relative w-full max-w-lg rounded-2xl border border-gray-700 p-2 md:rounded-3xl md:p-3 text-center">
+        <div class="relative flex flex-col items-center justify-center gap-4 rounded-xl p-8">
+            <h1 class="text-2xl font-bold font-major md:text-3xl text-rose-700">An Error Occurred</h1>
+            <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">{{ error }}</p>
+            <a href="{{ url_for('index.index') }}" class="mt-2 inline-flex items-center text-xs font-semibold px-4 py-2.5 rounded-lg border border-gray-700 text-slate-800 hover:bg-slate-200/50 transition-colors">
+                Return to Home Page
+            </a>
+        </div>
+    </div>
 </div>
-</section>
-
 {% endblock %}

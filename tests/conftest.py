@@ -5,16 +5,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pytest
-from app.app import app
+from app.app import app as flask_app
 
-flask_app = app
 
 @pytest.fixture
 def app():
-    flask_app.config.update({
-        "TESTING": True,
-    })
+    flask_app.config.update({"TESTING": True})
     yield flask_app
+
 
 @pytest.fixture
 def client(app):
